@@ -26,6 +26,6 @@ public class ContaCorrente extends Conta {
     public Boolean aplicarJuros(double juros) {
         if(juros < 0 || getSaldo() > 0)
             return false;
-        return super.aplicarJuros(juros);
+        return super.aplicarJuros(juros*(-1));
     }
 }
