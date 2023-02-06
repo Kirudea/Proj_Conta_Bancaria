@@ -1,6 +1,6 @@
 package com.banco.models;
 
-public class Conta {
+class Conta {
     private int numero;
     private int agencia;
     private Correntista correntista;
