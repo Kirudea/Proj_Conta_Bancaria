@@ -30,11 +30,15 @@ class Conta {
     }
     
     public Boolean fazerDeposito(double valor) {
+        if(valor < 0)
+            return false;
         saldo += valor;
         return true;
     }
 
     public Boolean fazerSaque(double valor) {
+        if(valor < 0)
+            return false;
         saldo -= valor;
         return true;
     }
