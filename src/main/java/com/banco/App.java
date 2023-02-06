@@ -1,10 +1,10 @@
 package com.banco;
 
-import com.banco.models.ContaCorrente;
+import com.banco.models.ContaC;
 
 public class App {
     public static void main( String[] args ) {
-        ContaCorrente c1 = new ContaCorrente(0);
-
+        ContaC c1 = new ContaC(1, 1);
+        
     }
 }
