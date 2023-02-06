@@ -4,7 +4,7 @@ class Conta {
     private int numero;
     private int agencia;
     private Correntista correntista;
-    private int saldo;
+    private double saldo;
 
     public Conta(int numero, int agencia, Correntista correntista) {
         this.numero = numero;
@@ -25,7 +25,7 @@ class Conta {
         return correntista;
     }
 
-    public int getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
     

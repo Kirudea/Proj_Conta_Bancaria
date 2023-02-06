@@ -11,16 +11,16 @@ public class App {
         ContaCorrente cc = new ContaCorrente(1, 1, cor);
         ContaPoupanca cp = new ContaPoupanca(2, 1, cor);
         
-        cc.fazerDeposito(20);
         cc.setLimite(100);
-        cc.fazerSaque(10);
-        cc.aplicarJuros(10);
+        System.out.printf("\nDeposito: %b\n", cc.fazerDeposito(20));
+        System.out.printf("Saque: %b\n", cc.fazerSaque(10));
+        System.out.printf("Juros: %b\n\n", cc.aplicarJuros(10));
+        
+        System.out.printf("Deposito: %b\n", cp.fazerSaque(10));
+        System.out.printf("Saque: %b\n", cp.fazerDeposito(20));
+        System.out.printf("Juros: %b\n\n", cp.aplicarJuros(10));
 
-        cp.fazerSaque(10);
-        cp.fazerDeposito(20);
-        cp.aplicarJuros(10);
-
-        System.out.println(cc.getSaldo());
-        System.out.println(cp.getSaldo());
+        System.out.printf("Saldo Final: %.2f\n", cc.getSaldo());
+        System.out.printf("Saldo Final: %.2f\n", cp.getSaldo());
     }
 }
