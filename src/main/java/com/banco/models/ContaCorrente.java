@@ -1,10 +1,11 @@
 package com.banco.models;
 
 public class ContaCorrente extends Conta {
-    private double limite = 0;
+    private double limite;
 
     public ContaCorrente(int numero, int agencia, Correntista correntista) {
         super(numero, agencia, correntista);
+        this.limite = 0;
     }
 
     public double getLimite() {

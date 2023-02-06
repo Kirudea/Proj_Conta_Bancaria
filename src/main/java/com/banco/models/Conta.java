@@ -4,12 +4,13 @@ class Conta {
     private int numero;
     private int agencia;
     private Correntista correntista;
-    private int saldo = 0;
+    private int saldo;
 
     public Conta(int numero, int agencia, Correntista correntista) {
         this.numero = numero;
         this.agencia = agencia;
         this.correntista = correntista;
+        this.saldo = 0;
     }
 
     public int getNumero() {
