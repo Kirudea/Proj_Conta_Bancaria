@@ -1,10 +1,10 @@
 package com.banco.models;
 
-public class ContaC extends Conta {
+public class ContaCorrente extends Conta {
     private double limite = 0;
 
-    public ContaC(int numero, int agencia) {
-        super(numero, agencia);
+    public ContaCorrente(int numero, int agencia, Correntista correntista) {
+        super(numero, agencia, correntista);
     }
 
     public double getLimite() {
@@ -25,6 +25,6 @@ public class ContaC extends Conta {
     public Boolean aplicarJuros(double juros) {
         if(juros < 0 || getSaldo() > 0)
             return false;
-        return super.aplicarJuros(juros*(-1));
+        return super.aplicarJuros(juros);
     }
 }

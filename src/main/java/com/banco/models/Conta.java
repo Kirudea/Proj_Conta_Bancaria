@@ -3,11 +3,13 @@ package com.banco.models;
 public class Conta {
     private int numero;
     private int agencia;
+    private Correntista correntista;
     private int saldo = 0;
 
-    public Conta(int numero, int agencia) {
+    public Conta(int numero, int agencia, Correntista correntista) {
         this.numero = numero;
         this.agencia = agencia;
+        this.correntista = correntista;
     }
 
     public int getNumero() {
@@ -16,6 +18,10 @@ public class Conta {
 
     public int getAgencia() {
         return agencia;
+    }
+
+    public Correntista getCorrentista() {
+        return correntista;
     }
 
     public int getSaldo() {

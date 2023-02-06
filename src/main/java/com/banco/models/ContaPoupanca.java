@@ -1,9 +1,9 @@
 package com.banco.models;
 
-public class ContaP extends Conta {
+public class ContaPoupanca extends Conta {
 
-    public ContaP(int numero, int agencia) {
-        super(numero, agencia);
+    public ContaPoupanca(int numero, int agencia, Correntista correntista) {
+        super(numero, agencia, correntista);
     }
     
     @Override
@@ -12,5 +12,4 @@ public class ContaP extends Conta {
             return false;
         return super.fazerSaque(valor);
     }
-
 }
