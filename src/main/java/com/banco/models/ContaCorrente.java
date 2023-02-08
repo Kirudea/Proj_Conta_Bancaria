@@ -17,15 +17,11 @@ public class ContaCorrente extends Conta {
     
     @Override
     public Boolean fazerSaque(double valor) {
-        if(valor > getSaldo() + limite)
-            return false;
-        return super.fazerSaque(valor);
+        return valor <= getSaldo() + limite && super.fazerSaque(valor);
     }
 
     @Override
     public Boolean aplicarJuros(double juros) {
-        if(juros < 0 || getSaldo() > 0)
-            return false;
-        return super.aplicarJuros(juros*(-1));
+        return getSaldo() < 0 && super.aplicarJuros(juros);
     }
 }

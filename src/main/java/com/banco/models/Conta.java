@@ -30,21 +30,26 @@ class Conta {
     }
     
     public Boolean fazerDeposito(double valor) {
-        if(valor < 0)
-            return false;
-        saldo += valor;
-        return true;
+        if(valor > 0){
+            saldo += valor;
+            return true;
+        }
+        return false;
     }
 
     public Boolean fazerSaque(double valor) {
-        if(valor < 0)
-            return false;
-        saldo -= valor;
-        return true;
+        if(valor > 0){
+            saldo -= valor;
+            return true;
+        }
+        return false;
     }
 
     public Boolean aplicarJuros(double juros){
-        saldo *= 1+(juros/100);
-        return true;
+        if(juros > 0){
+            saldo *= 1+(juros/100);
+            return true;
+        }
+        return false;
     }
 }
