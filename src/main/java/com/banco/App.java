@@ -15,10 +15,10 @@ public class App {
         cc.setLimite(100);
         System.out.printf("Saque: %b\n", cc.fazerSaque(10));
         System.out.printf("Juros: %b\n", cc.aplicarJuros(10));
-        System.out.printf("\nDeposito: %b\n", cc.fazerDeposito(20));
+        System.out.printf("Deposito: %b\n", cc.fazerDeposito(20));
         System.out.printf("Saldo Final: %.2f\n\n", cc.getSaldo());
         
-        System.out.println("---POUPANÇA---\n");
+        System.out.print("---POUPANÇA---\n");
         System.out.printf("Deposito: %b\n", cp.fazerDeposito(10));
         System.out.printf("Saque: %b\n", cp.fazerSaque(20));
         System.out.printf("Juros: %b\n", cp.aplicarJuros(10));
